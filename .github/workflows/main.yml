@@ -21,7 +21,7 @@ jobs:
       - name: Trigger Pipeline
         uses: giboow/action-aws-cli@v1
         with:
-          args: aws codepipeline start-pipeline-execution --name bos-karls-poc-gh-connector-build-clone
+          args: codepipeline start-pipeline-execution --name bos-karls-poc-gh-connector-build-clone
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_PIPELINE_ACCESS_KEY }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_PIPELINE_SECRET_KEY }}
