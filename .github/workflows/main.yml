@@ -18,12 +18,10 @@ jobs:
   deploy-to-aws:
     runs-on: ubuntu-latest
     steps:
-      - name: Debugging
-        run: echo 'Using ${{ secrets.AWS_PIPELINE_ACCESS_KEY }}'
       - name: Trigger AWS CodePipeline
         uses: zulhfreelancer/aws-codepipeline-action@v1.0.7
         with:
           aws-region: "us-east-1"
-          aws-access-key: ${{ secrets.AWS_PIPELINE_ACCESS_KEY }}
-          aws-secret-key: ${{ secrets.AWS_PIPELINE_SECRET_KEY }}
+          aws-access-key: ASIAXTGZ3JOIPOXOYJRD
+          aws-secret-key: EQIvP5E3itgb+FCaXUl4rGeE34RlJALaTW8NzunV
           pipeline-name: "bos-karls-poc-gh-connector-build-clone"
