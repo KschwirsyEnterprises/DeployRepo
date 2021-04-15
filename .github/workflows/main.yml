@@ -22,6 +22,6 @@ jobs:
         uses: zulhfreelancer/aws-codepipeline-action@v1.0.7
         with:
           aws-region: "us-east-1"
-          aws-access-key: ASIAXTGZ3JOIPOXOYJRD
-          aws-secret-key: EQIvP5E3itgb+FCaXUl4rGeE34RlJALaTW8NzunV
+          aws-access-key: ${{ secrets.AWS_PIPELINE_ACCESS_KEY }}
+          aws-secret-key: ${{ secrets.AWS_PIPELINE_SECRET_KEY }}
           pipeline-name: "bos-karls-poc-gh-connector-build-clone"
